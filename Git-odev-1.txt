@@ -1,0 +1,33 @@
+##Commit Nedir?
+Commit işlemi, genellikle yazılım geliştirme süreçlerinde kullanılan bir terimdir ve değişikliklerin kalıcı olarak kaydedildiği bir aşamayı ifade eder. Bir yazılım projesinde, geliştiriciler kod üzerinde değişiklikler yaparlar. Bu değişiklikler genellikle yeni özellikler eklemek, hataları düzeltmek veya mevcut kodu iyileştirmek gibi amaçlarla gerçekleştirilir. 
+
+##Commit Nasıl Yapılır?
+git init //İlk önce oluşturduğumuz projeyi git init ile initilaze ederiz.
+git add <dosya> // Daha sonra git add komutuyla eklemek istediğimiz dosya stage alanına ekleriz.
+git commit -m "Commit Mesajı" // Bu komutla birlikte nelerde değişiklikler yaptığımızı açıklama olarak ekleriz.
+git push origin // Push komutuyla commitimizi reporsitory'e yükleriz.
+
+## Birden Fazla Dosyanın Commit Edilmesi
+git add . // git add . diyerek bütün dosyalardaki tüm değişikleri stage alanına göndeririz.
+git commit -m "Commit mesajı" // Bu komutla birlikte nelerde değişiklikler yaptığımızı açıklama olarak ekleriz.
+git push origin // Push komutuyla commitimizi reporsitory'e yükleriz.
+
+##Commit Mesajlarının Önemi
+Commit mesajları, yazılım geliştirme sürecinde büyük bir öneme sahip olan iletilerdir.
+Commit mesajları projenizin geçmişini, değişikliklerin amacını ve projedeki gelişmeleri anlamak için önemli bir kaynaktır. Açıklayıcı, özlü ve anlamlı commit mesajları yazmak, hem sizin hem de diğer geliştiricilerin projenizi daha etkili bir şekilde yönetmesine yardımcı olur.
+
+##Commit Geçmişi
+
+git log // Log komutu sayesinde yapılan geçmiş bütün commitleri kontrol ederiz.Bu commitler en güncelden geçmişe doğru sistematik bir şekilde sıralanır.
+git checkout <commitID> // Bu komutla projeniz, belirttiğiniz commit'in durumuna döner. Ancak, bu durumda "detached HEAD" modunda olursunuz ve yeni commitler yapamazsınız.
+
+
+##Commit İptali Örneği
+git reset --hard <commitID>
+Bu işlemle seçtiğiniz commit ve sonrasındaki tüm commitler silinir. Bu nedenle dikkatli olun ve diğer geliştiricilerin de etkilenebileceğini unutmayın.
+
+##Commit değişikleri Geri alma
+git revert <commitID>
+Bu komutla yeni bir commit oluşturulur ve belirttiğiniz commit'teki değişiklikler geri alınır.
+
+
